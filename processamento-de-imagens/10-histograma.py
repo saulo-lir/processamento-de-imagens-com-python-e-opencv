@@ -85,7 +85,6 @@ plt.show()
 
 '''
 Outra forma de calcular e exibir os histogramas: Utilizando a função calcHist() e loop.
-Precisa importar a biblioteca numpy.
 (Método utilizado nas aulas de computação gráfica do IFAL)
 '''
 
