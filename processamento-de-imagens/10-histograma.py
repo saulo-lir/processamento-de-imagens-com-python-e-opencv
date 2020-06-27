@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 import matplotlib.pyplot as plt
 
 '''
@@ -81,3 +82,23 @@ plt.plot(totalListaVerde, color='green')
 plt.plot(totalListaAzul, color='blue')
 
 plt.show()
+
+'''
+Outra forma de calcular e exibir os histogramas: Utilizando a função calcHist() e loop.
+Precisa importar a biblioteca numpy.
+(Método utilizado nas aulas de computação gráfica do IFAL)
+'''
+
+image = cv2.imread('images/piscina-bolinhas.jpg')
+color = ('b', 'g', 'r')
+
+for key,value in enumerate(color):
+    histograma = cv2.calcHist([image], [key], None, [256], [0,256])
+    plt.plot(histograma, color=value)
+    plt.xlim([0,256])
+
+plt.savefig('images/histogramaColorido.jpg')
+plt.show()
+
+cv2.waitKey()
+cv2.destroyAllWindows()
