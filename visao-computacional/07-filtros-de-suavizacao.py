@@ -1,11 +1,9 @@
 import cv2 as cv
 
 '''
-Filtros de suavização
-
 Filtros Lineares:
-    -> Passa-baixas
-    -> Passa-altas
+    -> Passa-baixas (Filtros de suavização)
+    -> Passa-altas  (Filtros de realce)
 
 Filtros não lineares
 '''
